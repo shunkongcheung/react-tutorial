@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import React from "react";
 
 import Footer from "../Footer";
 import Header from "../Header";
@@ -11,18 +11,18 @@ import classNames from "./index.module.css";
 function App() {
   console.log("Rendering application (before state declaration)...");
 
-  const [count, setCount] = useState(0);
-  const [isLogined, setIsLogined] = useState(false);
+  let count = 0;
+  let isLogined = false;
 
-  const handleLoginSuccess = useCallback(() => {
+  const handleLoginSuccess = () => {
     console.log("user is logged in");
-    setIsLogined(true);
-  }, []);
-  const handleLogout = useCallback(() => {
+    isLogined = true;
+  };
+  const handleLogout = () => {
     console.log("user is logged out");
-    setIsLogined(false);
-    setCount((oValue) => oValue + 1);
-  }, []);
+    isLogined = false;
+    count++;
+  };
 
   console.log("Rendering application (after state declaration)...");
   return (

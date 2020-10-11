@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import React from "react";
 
 import classNames from "./index.module.css";
 
@@ -14,4 +14,4 @@ const Footer: React.FC<FooterProps> = ({ count }) => {
   );
 };
 
-export default memo(Footer);
+export default Footer;
