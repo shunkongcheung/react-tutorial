@@ -10,7 +10,7 @@ function useKeyOneListener() {
     document.addEventListener("keydown", onKeyOneDown);
 
     return () => {
-      console.log("component is unmounted");
+      // console.log("component is unmounted");
       document.removeEventListener("keydown", onKeyOneDown);
     };
   }, []);
