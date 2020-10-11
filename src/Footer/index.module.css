@@ -11,19 +11,3 @@
   align-items: center;
   justify-content: space-between;
 }
-
-.incrementBtn {
-  color: white;
-  padding: 15px 32px;
-  border-radius: 3px;
-  border: none;
-  font-size: 16px;
-  background-color: #555;
-}
-
-.quote {
-  margin-top: auto;
-  text-align: right;
-  color: #666;
-  margin-right: 22px;
-}
