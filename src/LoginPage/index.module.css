@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: auto;
+  padding: 30px 0;
+}
+
+.errMsg {
+  color: red;
+  font-size: 12px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 12px;
+}
