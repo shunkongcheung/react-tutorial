@@ -9,12 +9,22 @@ import HomePage from "../HomePage";
 import classNames from "./index.module.css";
 
 function App() {
+  console.log("Rendering application (before state declaration)...");
+
   const [count, setCount] = useState(0);
   const [isLogined, setIsLogined] = useState(false);
 
-  const handleLoginSuccess = useCallback(() => setIsLogined(true), []);
-  const handleLogout = useCallback(() => setIsLogined(false), []);
+  const handleLoginSuccess = useCallback(() => {
+    console.log("user is logged in");
+    setIsLogined(true);
+  }, []);
+  const handleLogout = useCallback(() => {
+    console.log("user is logged out");
+    setIsLogined(false);
+    setCount((oValue) => oValue + 1);
+  }, []);
 
+  console.log("Rendering application (after state declaration)...");
   return (
     <>
       <Header handleLogout={handleLogout} />
@@ -29,7 +39,7 @@ function App() {
         Man is born free and everywhere he is in chains. -- Jean-Jacques
         Rousseau
       </div>
-      <Footer count={count} handleCount={() => setCount((o) => o + 1)} />
+      <Footer count={count} />
     </>
   );
 }
