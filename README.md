@@ -1,5 +1,21 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Description
+
+Example of using hooks.
+
+Checkout `starter` branch to follow the tutorial.
+
+To learn more about React, visit [here](https://reactjs.org/docs/getting-started.html).
+
+To learn more about hook, watch [this](https://www.youtube.com/playlist?list=PLJILLJCQRFHWCC85T93Rg4W1wQScZ00bP) and read [this](https://reactjs.org/docs/hooks-state.html).
+
+To learn more about create-react-app with typescript, visit [here](https://create-react-app.dev/docs/adding-typescript/).
+
+Learn more about JSX, read [this](https://zh-hant.reactjs.org/docs/introducing-jsx.html).
+
+
+
 ## Available Scripts
 
 In the project directory, you can run:
