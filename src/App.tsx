@@ -2,8 +2,16 @@ import { useState } from "react";
 import './App.css';
 
 function App() {
-  const [username, setUsername] =  useState("");
-  const [password, setPassword] =  useState("");
+  const [{ username, password }, setFormState] =  useState({
+    username: "",
+    password: ""
+  });
+
+  const handleInputChange = (fieldName: string, value: string) => {
+    setFormState(oldState => {
+      return { ...oldState, [fieldName]: value };
+    });
+  }
 
 
   console.log({ username, password });
@@ -15,11 +23,11 @@ function App() {
     }}>
       <div>
         <label htmlFor="username">Username</label>
-        <input id="username" value={username} onChange={(event) => setUsername(event.target.value)}></input>
+        <input id="username" value={username} onChange={(event) => handleInputChange("username", event.target.value)}></input>
       </div>
       <div>
         <label htmlFor="password">Password</label>
-        <input id="password" type="password" value={password} onChange={(event) => setPassword(event.target.value)}></input>
+        <input id="password" type="password" value={password} onChange={(event) => handleInputChange("password", event.target.value)}></input>
       </div>
       {username === "keyword" && (
         <div>surprise! you have provided the correct username!</div>
