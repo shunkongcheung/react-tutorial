@@ -1,7 +1,7 @@
 import { useState } from "react";
 import './App.css';
 
-function App() {
+const useForm = () => {
   const [{ username, password }, setFormState] =  useState({
     username: "",
     password: ""
@@ -13,6 +13,11 @@ function App() {
     });
   }
 
+  return { username, password, handleInputChange };
+}
+
+function App() {
+  const { username, password, handleInputChange } = useForm();
 
   console.log({ username, password });
 
